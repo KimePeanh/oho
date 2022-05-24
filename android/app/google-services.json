@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "203838149170",
+    "project_id": "ohonecam",
+    "storage_bucket": "ohonecam.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:203838149170:android:112dc3e5fc06f962a3a22b",
+        "android_client_info": {
+          "package_name": "com.ohonenext.onecam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "203838149170-1vbc74bn55mpb6n4lqt1aj888ta3b9mj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ohonenext.onecam",
+            "certificate_hash": "78d0d4ced2c7794ee1a79d901117008c3628e640"
+          }
+        },
+        {
+          "client_id": "203838149170-pnves37thpesr3e4u5sqg6gjhi7lnu1i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNqbU-xKkekrLFUIHINGqfCBrVAaMuDpo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "203838149170-pnves37thpesr3e4u5sqg6gjhi7lnu1i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
