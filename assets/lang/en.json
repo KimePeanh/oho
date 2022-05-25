@@ -3,6 +3,13 @@
     "pass": "Password",
     "forget": "Forget Password",
     "Login": "Login",
-    "don't have acc": "Don't have an account?"
-
+    "don't have acc": "Don't have an account?",
+    "setting": "Setting",
+    "aboutus": "About Us",
+    "contactus": "Contact Us",
+    "term": "Term and Conditions",
+    "managefri": "Manage Friend List",
+    "changepass": "Change password",
+    "logout": "Log Out",
+    "lang": "Language"
 }

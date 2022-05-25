@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:onecam/src/features/navigator/navigator.dart';
 import 'package:onecam/src/features/otp/otp.dart';
 
 class Method {
@@ -64,8 +65,8 @@ class Method {
       final User user = (await _auth.signInWithCredential(credential)).user!;
       if (user.uid.isNotEmpty) {
         Fluttertoast.showToast(msg: "Login Successful");
-        // Navigator.pushReplacement(
-        //     context, MaterialPageRoute(builder: (context) => BottomNav()));
+        Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => BottomNav()));
       }
     } catch (e) {
       print(e);

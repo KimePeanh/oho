@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 
 import 'package:onecam/src/features/login_register/method.dart';
+import 'package:onecam/src/features/navigator/navigator.dart';
 import 'package:onecam/src/shared/shared_widget.dart';
 import 'package:onecam/src/utils/app_con.dart';
 import 'package:otp_text_field/otp_field.dart';
@@ -58,7 +59,7 @@ class _OTPScreenState extends State<OTPScreen> {
       });
     });
     setState(() {
-      id = allID.reduce((curr, next) => curr > next ? curr : next)+1;
+      id = allID.reduce((curr, next) => curr > next ? curr : next) + 1;
       print(id);
     });
   }
@@ -94,8 +95,7 @@ class _OTPScreenState extends State<OTPScreen> {
               width: MediaQuery.of(context).size.width - 20,
               child: Text(
                 "Please confirm your Phone Verification",
-                style: TextStyle(
-                    color: Blue, fontWeight: bold, fontSize: 16),
+                style: TextStyle(color: Blue, fontWeight: bold, fontSize: 16),
               ),
             ),
             Container(
@@ -104,7 +104,7 @@ class _OTPScreenState extends State<OTPScreen> {
               child: Text(
                 "Enter your OTP code here",
                 style: TextStyle(
-                  color:  Blue,
+                  color: Blue,
                 ),
               ),
             ),
@@ -140,8 +140,8 @@ class _OTPScreenState extends State<OTPScreen> {
             InkWell(
               child: logButton(context, "Verify Now"),
               onTap: () {
-                // Navigator.pushReplacement(context,
-                //     MaterialPageRoute(builder: (context) => FistIntroScreen()));
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => BottomNav()));
               },
             )
           ],
@@ -192,8 +192,8 @@ class _OTPScreenState extends State<OTPScreen> {
         user.updatePhotoURL(
             'https://firebasestorage.googleapis.com/v0/b/newonecam-53e7c.appspot.com/o/user%20(1).png?alt=media&token=c4dafa52-3e22-4514-9482-874bd4dde42d');
         user.reload();
-        // Navigator.pushReplacement(
-        //     context, MaterialPageRoute(builder: (context) => BottomNav()));
+        Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => BottomNav()));
 
         // Navigator.pushReplacement(
         //     context,

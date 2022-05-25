@@ -3,6 +3,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:onecam/app_localiztion.dart';
+import 'package:onecam/src/features/language/screen/languages.dart';
 import 'package:onecam/src/features/login_register/login/screen/loginscreen.dart';
 import 'package:onecam/src/features/my_profile/MyProfileScreen.dart';
 import 'package:onecam/src/utils/app_con.dart';
@@ -296,8 +298,9 @@ class _SettingPageState extends State<SettingPage> {
               ),
               Container(
                 width: MediaQuery.of(context).size.width - 15,
-                padding: EdgeInsets.only(left: 15, right: 15, top: 10,bottom: 20),
-               // height: 180,
+                padding:
+                    EdgeInsets.only(left: 15, right: 15, top: 10, bottom: 20),
+                // height: 180,
                 decoration: BoxDecoration(
                     color: mainColorRed,
                     borderRadius: BorderRadius.circular(15)),
@@ -320,7 +323,8 @@ class _SettingPageState extends State<SettingPage> {
                           children: [
                             Expanded(
                                 child: Text(
-                              "About Us",
+                              AppLocalizations.of(context)!
+                                  .translate("aboutus")!,
                               style: TextStyle(color: white, fontSize: 17),
                             )),
                             Expanded(
@@ -354,7 +358,8 @@ class _SettingPageState extends State<SettingPage> {
                           children: [
                             Expanded(
                                 child: Text(
-                              "Contact Us",
+                              AppLocalizations.of(context)!
+                                  .translate("contactus")!,
                               style: TextStyle(color: white, fontSize: 17),
                             )),
                             Expanded(
@@ -386,7 +391,7 @@ class _SettingPageState extends State<SettingPage> {
                           children: [
                             Expanded(
                                 child: Text(
-                              "Term and Conditions",
+                              AppLocalizations.of(context)!.translate("term")!,
                               style: TextStyle(color: white, fontSize: 17),
                             )),
                             Expanded(
@@ -405,7 +410,44 @@ class _SettingPageState extends State<SettingPage> {
                           color: white,
                         ),
                       ],
-                    )
+                    ),
+                    InkWell(
+                      child: Container(
+                        child: Column(
+                          children: [
+                            Row(
+                              children: [
+                                Expanded(
+                                    child: Text(
+                                  AppLocalizations.of(context)!
+                                      .translate("lang")!,
+                                  style: TextStyle(color: white, fontSize: 17),
+                                )),
+                                Expanded(
+                                    child: Container(
+                                        alignment: Alignment.centerRight,
+                                        //padding: EdgeInsets.only(right: 15),
+                                        child: Icon(
+                                          Icons.call,
+                                          color: white,
+                                        )))
+                              ],
+                            ),
+                            SizedBox(
+                              height: 5,
+                            ),
+                            Container(
+                              height: 1,
+                              // padding: EdgeInsets.only(right: 15),
+                              color: white,
+                            ),
+                          ],
+                        ),
+                      ),
+                      onTap: () {
+                        languageModal(context);
+                      },
+                    ),
                   ],
                 ),
               ),
@@ -414,7 +456,12 @@ class _SettingPageState extends State<SettingPage> {
               ),
               Container(
                 width: MediaQuery.of(context).size.width - 15,
-                padding: EdgeInsets.only(left: 15, right: 15, top: 10,bottom: 10,),
+                padding: EdgeInsets.only(
+                  left: 15,
+                  right: 15,
+                  top: 10,
+                  bottom: 10,
+                ),
                 //height: 180,
                 decoration: BoxDecoration(
                     color: mainColorRed,
@@ -425,7 +472,7 @@ class _SettingPageState extends State<SettingPage> {
                         alignment: Alignment.centerLeft,
                         //padding: EdgeInsets.only(left: 15),
                         child: Text(
-                          "User Setting ",
+                          AppLocalizations.of(context)!.translate("setting")!,
                           style: TextStyle(
                               color: white, fontSize: 18, fontWeight: bold),
                         )),
@@ -438,7 +485,8 @@ class _SettingPageState extends State<SettingPage> {
                           children: [
                             Expanded(
                                 child: Text(
-                              "Manage Friend List",
+                              AppLocalizations.of(context)!
+                                  .translate("managefri")!,
                               style: TextStyle(color: white, fontSize: 17),
                             )),
                             Expanded(
@@ -468,7 +516,8 @@ class _SettingPageState extends State<SettingPage> {
                             children: [
                               Expanded(
                                   child: Text(
-                                "Chagne password",
+                                AppLocalizations.of(context)!
+                                    .translate("changepass")!,
                                 style: TextStyle(color: white, fontSize: 17),
                               )),
                               Expanded(
@@ -527,7 +576,7 @@ class _SettingPageState extends State<SettingPage> {
                   )
                 ]),
             child: Text(
-              "Log Out",
+              AppLocalizations.of(context)!.translate("logout")!,
               style: TextStyle(color: white, fontWeight: bold, fontSize: 18),
             ),
           ),
